@@ -36,7 +36,7 @@ postgres:9.6.1
 mvn spring-boot:run
 ```
 
-### Run demo site
+### Run Demo App
 
 ```
 cd demo
@@ -56,6 +56,6 @@ curl http://localhost:1337 -X POST \
 
 ```
 {
-    "pwnd": true
+    "compromised": true
 }
 ```
