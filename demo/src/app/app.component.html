@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h1>Create Account</h1>
+
+      <form>
+        <div class="form-group">
+          <label for="emailAddressInput">Email Address</label>
+          <input type="email" class="form-control" id="emailAddressInput" placeholder="Enter email address">
+        </div>
+
+        <div class="form-group" [class.is-invalid]="isCompromised">
+          <label for="passwordInput">Password</label>
+          <input type="password" class="form-control" [class.is-invalid]="isCompromised" id="passwordInput" placeholder="Password"
+                 (keyup)="onPasswordChanged($event)">
+          <div *ngIf="isCompromised" class="invalid-feedback">
+            <i class="fa fa-warning"></i>
+            The password you have entered was found to be compromised in a data breach.
+            Please choose a secure password.
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!canSubmit">Create Account</button>
+      </form>
+    </div>
+
+    <div class="col-4 offset-1">
+      <h1>Password:</h1>
+      <h1>{{ password }}</h1>
+    </div>
+  </div>
+</div>
