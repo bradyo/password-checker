@@ -3,6 +3,8 @@
 This service checks password hashes against known data breaches. It can be used during
 account creation to protect users from setting their login password to breached passwords.
 
+![Screenshot](screenshot.png)
+
 
 ## Set up
 
