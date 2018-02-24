@@ -19,6 +19,13 @@ The data file should be placed a data folder configured in application.yml to be
 when the application starts up.
 
 
+## HTTPS warning
+
+This demo doesn't use HTTPS. For production setups you would want to ensure you aren't sending
+any plaintext passwords over the network by enabling HTTPS to your backend API using 
+https://letsencrypt.org/ and a reverse proxy to the microservice, example:
+https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-with-ssl-as-a-reverse-proxy-for-jenkins
+
 ### Database
 
 ```shell
