@@ -1,0 +1,20 @@
+
+server:
+  port: 1337
+
+# Passwords file, each line must contain sha1 hash and count separated by a colon,
+# i.e "3CA8B82657F230D8B7D6F7184E44FC89F436E014:1127"
+passwordsFile: "/data/password_check/passwords.txt"
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: "validate"
+  datasource:
+    platform: "postgres"
+    url: "jdbc:postgresql://localhost:51337/password_check"
+    username: "postgres"
+    password: "12345"
+
+flyway:
+  enabled: true
